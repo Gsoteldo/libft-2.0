@@ -12,6 +12,15 @@
 
 #include "../../libft.h"
 
+/**
+ * Imprime un número entero sin signo en la salida estándar.
+ * Si el número es menor o igual a 9, imprime el número como un dígito decimal.
+ * Si el número es mayor que 9, llama a sí misma recursivamente con el número dividido por 10 y luego imprime el último dígito del número.
+ *
+ * @param n: El número entero sin signo a imprimir.
+ * @param total: Un puntero a un entero que se actualizará con el número de caracteres escritos.
+ */
+
 void	ft_printunsigned(unsigned int n, int *total)
 {
 	int	aux;

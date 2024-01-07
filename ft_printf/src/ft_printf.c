@@ -12,6 +12,24 @@
 
 #include "../../libft.h"
 
+/**
+ * Imprime un argumento específico según su tipo.
+ * Dependiendo del carácter de formato proporcionado, imprime un carácter, 
+ * una cadena de caracteres, un número entero, un puntero, 
+ * un número hexadecimal o un número sin signo.
+ *
+ * @param c: El carácter de formato que especifica 
+ * el tipo de argumento a imprimir.
+
+ * @param vargs: Una lista variable de argumentos a imprimir.
+
+ * @param total: Un puntero a un entero que se actualizará 
+ * con el número de caracteres escritos.
+
+ * @param i: Un puntero a un entero que se utiliza para recorrer 
+ *la lista de argumentos.
+ */
+
 void	ft_type_print(char c, va_list vargs, int *total, int *i)
 {
 	if (c == 'c')
@@ -31,6 +49,17 @@ void	ft_type_print(char c, va_list vargs, int *total, int *i)
 	else
 		(*i)--;
 }
+/**
+ * Imprime una serie de datos en la salida estándar según un formato especificado.
+ * Utiliza un bucle while para recorrer la cadena de formato.
+ * Si encuentra un carácter %, llama a la función ft_type_print para imprimir el argumento correspondiente.
+ * Si encuentra un carácter que no es %, lo imprime directamente.
+ * Cuando termina de recorrer la cadena de formato, retorna el contador de caracteres escritos.
+ *
+ * Parametro de entrada string: La cadena de formato que especifica cómo imprimir los datos.
+ * Parametro de entrada vargs: Una lista variable de argumentos a imprimir.
+ * Retorno El número de caracteres escritos.
+ */
 
 int	ft_printf(const char *string, ...)
 {

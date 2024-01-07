@@ -12,6 +12,14 @@
 
 #include "../libft.h"
 
+/** digit_counter
+ * Cuenta el número de dígitos en el número entero proporcionado.
+ * Devuelve 1 para el número 0, 11 para el número -2147483648 y el número de dígitos para otros números.
+ *
+ * @param n: El número entero para contar los dígitos.
+ * @return El número de dígitos en el número entero.
+ */
+
 static int	digit_counter(int n)
 {
 	int	i;
@@ -36,6 +44,15 @@ static int	digit_counter(int n)
 	return (i);
 }
 
+/** exp_counter
+ * Calcula la potencia de 10 equivalente al número de dígitos en el número entero proporcionado.
+ * Devuelve 1 para el número 0 y 1000000000 para el número -2147483648.
+ * Para otros números, calcula la potencia de 10 que es igual al número de dígitos.
+ *
+ * @param n: El número entero para calcular la potencia de 10.
+ * @return La potencia de 10 equivalente al número de dígitos en el número entero.
+ */
+
 static int	exp_counter(int n)
 {
 	int	exp;
@@ -53,6 +70,16 @@ static int	exp_counter(int n)
 		exp = exp * 10;
 	return (exp);
 }
+
+/** ft_itoa
+ * Convierte un número entero a una cadena de caracteres.
+ * Primero calcula la cantidad de dígitos y la potencia de 10 correspondiente utilizando las funciones anteriores.
+ * Luego, divide el número por la potencia de 10, obtiene el resto, y convierte el cociente y el resto a caracteres.
+ * Finalmente, añade los caracteres a la cadena resultante.
+ *
+ * @param n: El número entero a convertir a una cadena de caracteres.
+ * @return: La cadena de caracteres correspondiente al número entero.
+ */
 
 char	*ft_itoa(int n)
 {

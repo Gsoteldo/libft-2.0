@@ -12,6 +12,14 @@
 
 #include "../libft.h"
 
+/**
+ * Convierte un carácter a mayúsculas si es una letra minúscula.
+ * Si el carácter es una letra minúscula (su valor ASCII está entre 97 y 122), resta 32 a su valor ASCII para convertirlo a mayúsculas.
+ * Retorna el carácter.
+ *
+ * @param c: Carácter a convertir a mayúsculas.
+ * @return: Carácter convertido a mayúsculas, o el mismo carácter si no era una letra minúscula.
+ */
 int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)

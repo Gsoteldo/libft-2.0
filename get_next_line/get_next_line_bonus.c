@@ -12,8 +12,13 @@
 
 #include "../libft.h"
 
-/*Se encarga de concatenar y de liberar lo ubicado en buffer 
- * (en este caso es la variable estatica)*/
+/**
+ * Libera la memoria asignada a buffer y devuelve la concatenación de buffer y line.
+ *
+ * @param buffer: El buffer a liberar.
+ * @param line: La línea a concatenar con buffer.
+ * @return: La concatenación de buffer y line.
+ */
 static char	*ft_free(char *buffer, char *line)
 {
 	char	*tmp;
@@ -23,7 +28,14 @@ static char	*ft_free(char *buffer, char *line)
 	return (tmp);
 }
 
-/*Se encarga de leer el archivo y pasar lo leido al  buffer*/
+/**
+ * Lee del archivo hasta encontrar un salto de línea o llegar al final del archivo.
+ * Devuelve el contenido leído.
+ *
+ * @param fd: El descriptor de archivo del archivo a leer.
+ * @param buffer: El buffer donde guardar el contenido leído.
+ * @return: El contenido leído del archivo.
+ */
 static char	*read_file(int fd, char *buffer)
 {
 	char	*line;
@@ -52,6 +64,12 @@ static char	*read_file(int fd, char *buffer)
 	return (buffer);
 }
 
+/**
+ * Extrae la primera línea de buffer.
+ *
+ * @param buffer: El buffer del cual extraer la línea.
+ * @return: La primera línea de buffer.
+ */
 static char	*ft_line(char *buffer)
 {
 	char	*line;
@@ -76,6 +94,12 @@ static char	*ft_line(char *buffer)
 	return (line);
 }
 
+/**
+ * Extrae el resto de buffer después de la primera línea.
+ *
+ * @param buffer: El buffer del cual extraer el resto.
+ * @return: El resto de buffer después de la primera línea.
+ */
 static char	*ft_next(char *buffer)
 {
 	char	*next;
@@ -104,6 +128,13 @@ static char	*ft_next(char *buffer)
 	return (next);
 }
 
+/**
+ * Lee una línea de un archivo abierto en un descriptor de archivo dado.
+ * Devuelve la línea leída.
+ *
+ * @param fd: El descriptor de archivo del archivo a leer.
+ * @return: La línea leída del archivo.
+ */
 char	*get_next_line(int fd)
 {
 	static char	*buffer[1024];

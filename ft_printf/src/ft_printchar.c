@@ -12,6 +12,16 @@
 
 #include "../../libft.h"
 
+/**
+ * Escribe un carácter en la salida estándar y actualiza un contador de caracteres escritos.
+ * Utiliza la función write del sistema operativo para escribir el carácter.
+ * Si la función write retorna -1, establece el valor apuntado por el puntero a -1 y termina la función.
+ * Si la función write retorna un número distinto de -1, suma ese número al valor apuntado por el puntero.
+ *
+ * @param c: El carácter a escribir.
+ * @param total: Un puntero a un entero que se actualizará con el número de caracteres escritos.
+ */
+
 void	ft_printchar(int c, int *total)
 {
 	int	aux;

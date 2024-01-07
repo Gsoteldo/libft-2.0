@@ -10,6 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * Verifica si un carácter dado es imprimible.
+ * Si el valor del carácter está entre 32 y 126, retorna 1.
+ * Si el valor del carácter no está entre 32 y 126, retorna 0.
+ *
+ * @param c: El carácter a verificar.
+ * @return: 1 si el carácter es imprimible, 0 en caso contrario.
+ */
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)

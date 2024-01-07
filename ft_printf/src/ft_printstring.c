@@ -12,6 +12,15 @@
 
 #include "../../libft.h"
 
+/**
+ * Imprime una cadena de caracteres en la salida estándar.
+ * Si la cadena de caracteres es NULL, imprime "(null)" en la salida estándar y actualiza el contador de caracteres escritos.
+ * Si la cadena de caracteres no es NULL, imprime la cadena de caracteres en la salida estándar y actualiza el contador de caracteres escritos.
+ *
+ * @param str: La cadena de caracteres a imprimir.
+ * @param total: Un puntero a un entero que se actualizará con el número de caracteres escritos.
+ */
+
 void	ft_printstring(char *str, int *total)
 {
 	int	aux;

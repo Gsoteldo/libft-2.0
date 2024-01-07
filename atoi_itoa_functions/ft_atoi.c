@@ -12,6 +12,15 @@
 
 #include "../libft.h"
 
+/**
+ * Convierte una cadena de caracteres a un número entero.
+ * Ignora los espacios en blanco iniciales y los signos '+' o '-'.
+ * Retorna el número entero correspondiente o 0 si la cadena no contiene ningún dígito.
+ *
+ * @param str: La cadena de caracteres a convertir.
+ * @return: El número entero correspondiente a la cadena.
+ */
+
 int	ft_atoi(const char *str)
 {
 	int	i;

@@ -12,6 +12,18 @@
 
 #include "../libft.h"
 
+/**
+ * Duplica una cadena de caracteres.
+ * Calcula la longitud de la cadena de caracteres utilizando la función ft_strlen.
+ * Asigna memoria dinámicamente para una nueva cadena de caracteres de la misma longitud que la cadena de caracteres original más 1 (para el carácter nulo al final de la cadena de caracteres).
+ * Verifica si la asignación de memoria fue exitosa. Si no fue exitosa, retorna nulo.
+ * Copia los caracteres de la cadena de caracteres original a la nueva cadena de caracteres.
+ * Agrega un carácter nulo al final de la nueva cadena de caracteres.
+ * Retorna la nueva cadena de caracteres.
+ *
+ * @param str: Cadena de caracteres a duplicar.
+ * @return: Nueva cadena de caracteres duplicada de la cadena de caracteres original, o nulo si la asignación de memoria falló.
+ */
 char	*ft_strdup(const char *str)
 {
 	size_t	len;

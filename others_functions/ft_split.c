@@ -12,6 +12,18 @@
 
 #include "../libft.h"
 
+/**
+ * Divide una cadena de texto en subcadenas basándose en un delimitador específico y retorna un arreglo de punteros a esas subcadenas.
+ * Cuenta el número de subcadenas que resultarán al dividir la cadena de texto por el delimitador utilizando la función numstring.
+ * Asigna memoria dinámicamente para un arreglo de punteros a subcadenas.
+ * Verifica si la asignación de memoria fue exitosa. Si no fue exitosa, retorna nula.
+ * Divide la cadena de texto en subcadenas y las almacena en el arreglo de punteros a subcadenas utilizando la función affect.
+ * Retorna el arreglo de punteros a subcadenas.
+ *
+ * @param s: Cadena de texto a dividir.
+ * @param c: Delimitador por el cual dividir la cadena de texto.
+ * @return: Arreglo de punteros a subcadenas.
+ */
 static int	numstring(char const *s1, char c)
 {
 	int	comp;
@@ -35,6 +47,15 @@ static int	numstring(char const *s1, char c)
 	return (comp);
 }
 
+/**
+ * Cuenta el número de caracteres en una subcadena.
+ * Recorre la cadena de texto y cada vez que encuentra el delimitador, detiene el conteo y retorna el contador.
+ *
+ * @param s2: Cadena de texto de la que extraer la subcadena.
+ * @param c: Delimitador por el cual dividir la cadena de texto.
+ * @param i: Índice inicial de la subcadena.
+ * @return: Longitud de la subcadena.
+ */
 static int	numchar(char const *s2, char c, int i)
 {
 	int	lenght;
@@ -48,6 +69,14 @@ static int	numchar(char const *s2, char c, int i)
 	return (lenght);
 }
 
+/**
+ * Libera la memoria asignada a un arreglo de punteros a subcadenas.
+ * Recorre el arreglo y libera cada subcadena, y luego libera el arreglo en sí.
+ *
+ * @param dst: Arreglo de punteros a subcadenas.
+ * @param j: Índice final del arreglo.
+ * @return: Nulo.
+ */
 static char	**ft_free(char const **dst, int j)
 {
 	while (j > 0)
@@ -59,6 +88,16 @@ static char	**ft_free(char const **dst, int j)
 	return (NULL);
 }
 
+/**
+ * Divide la cadena de texto en subcadenas y las almacena en un arreglo de punteros a subcadenas.
+ * Recorre la cadena de texto y cada vez que encuentra el delimitador, crea una nueva subcadena, la almacena en el arreglo y continúa con la próxima subcadena.
+ *
+ * @param s: Cadena de texto a dividir.
+ * @param dst: Arreglo de punteros a subcadenas.
+ * @param c: Delimitador por el cual dividir la cadena de texto.
+ * @param l: Número de subcadenas.
+ * @return: Arreglo de punteros a subcadenas.
+ */
 static char	**affect(char const *s, char **dst, char c, int l)
 {
 	int	i;
@@ -84,6 +123,18 @@ static char	**affect(char const *s, char **dst, char c, int l)
 	return (dst);
 }
 
+/**
+ * Divide una cadena de texto en subcadenas basándose en un delimitador específico y retorna un arreglo de punteros a esas subcadenas.
+ * Cuenta el número de subcadenas que resultarán al dividir la cadena de texto por el delimitador utilizando la función numstring.
+ * Asigna memoria dinámicamente para un arreglo de punteros a subcadenas.
+ * Verifica si la asignación de memoria fue exitosa. Si no fue exitosa, retorna nula.
+ * Divide la cadena de texto en subcadenas y las almacena en el arreglo de punteros a subcadenas utilizando la función affect.
+ * Retorna el arreglo de punteros a subcadenas.
+ *
+ * @param s: Cadena de texto a dividir.
+ * @param c: Delimitador por el cual dividir la cadena de texto.
+ * @return: Arreglo de punteros a subcadenas.
+ */
 char	**ft_split(char const *s, char c)
 {
 	char	**dst;

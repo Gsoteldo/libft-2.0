@@ -12,6 +12,16 @@
 
 #include "../libft.h"
 
+/**
+ * Crea una nueva lista enlazada a partir de una existente, aplicando una función dada a cada elemento de la lista original.
+ * Aplica la función de transformación al contenido del nodo actual de la lista original para obtener el contenido del nuevo nodo, crea un nuevo nodo con ese contenido y lo añade al final de la nueva lista.
+ * Cuando la lista original esté vacía, retorna la nueva lista.
+ *
+ * @param lst: Puntero al primer nodo de la lista original.
+ * @param f: Función de transformación a aplicar a cada elemento de la lista original.
+ * @param del: Función de eliminación a llamar para cada elemento de la lista original cuando ya no sea necesario.
+ * @return: Una nueva lista enlazada con los elementos transformados de la lista original.
+ */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void *))
 {
 	t_list	*primera;

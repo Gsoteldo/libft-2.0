@@ -12,6 +12,13 @@
 
 #include "../libft.h"
 
+/**
+ * Aplica una función dada a cada carácter de una cadena de caracteres junto con su índice.
+ * Llama a la función dada con el índice y el carácter actual de la cadena de caracteres como argumentos y luego incrementa el contador.
+ *
+ * @param s: Cadena de caracteres sobre la cual aplicar la función.
+ * @param f: Función a aplicar a cada carácter de la cadena de caracteres junto con su índice.
+ */
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int		i;

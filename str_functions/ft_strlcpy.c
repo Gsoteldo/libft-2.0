@@ -12,6 +12,18 @@
 
 #include "../libft.h"
 
+/**
+ * Copia una cadena de caracteres a otra cadena de caracteres, pero con una limitación de tamaño en la cadena de destino.
+ * Si el tamaño es 0, calcula la longitud de la cadena de origen utilizando la función ft_strlen, guarda la longitud en el contador y retorna la longitud.
+ * Mientras el carácter en la posición del primer contador de la cadena de origen no sea el carácter nulo y el primer contador sea menor que el tamaño menos uno, copia el carácter de la cadena de origen a la cadena de destino y luego incrementa el primer contador.
+ * Agrega un carácter nulo al final de la cadena de destino.
+ * Calcula la longitud de la cadena de origen utilizando la función ft_strlen, guarda la longitud en el contador y retorna la longitud.
+ *
+ * @param dst: Cadena de caracteres de destino a la que copiar la cadena de origen.
+ * @param src: Cadena de caracteres de origen a copiar a la cadena de destino.
+ * @param dstsize: Tamaño máximo de la cadena de destino.
+ * @return: La longitud de la cadena de origen.
+ */
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;

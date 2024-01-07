@@ -12,6 +12,14 @@
 
 #include "../../libft.h"
 
+/**
+ * Imprime el número entero más pequeño posible en formato decimal.
+ * Primero imprime un guión "-", luego imprime el número 2147483648.
+ *
+ * @param total: Un puntero a un entero que se actualizará con el número de caracteres escritos.
+ * @return: El número de caracteres escritos.
+ */
+
 static int	min_negative(int *total)
 {
 	int	numchar;
@@ -28,6 +36,15 @@ static int	min_negative(int *total)
 	numchar = numchar + aux;
 	return (numchar);
 }
+
+/**
+ * Imprime un número entero negativo en formato decimal.
+ * Primero imprime un guión "-", luego imprime el número absoluto del número negativo.
+ *
+ * @param n: El número entero negativo a imprimir.
+ * @param total: Un puntero a un entero que se actualizará con el número de caracteres escritos.
+ * @return: El número de caracteres escritos.
+ */
 
 static int	negative_numbers(int n, int *total)
 {
@@ -50,6 +67,15 @@ static int	negative_numbers(int n, int *total)
 	return (numchar);
 }
 
+/**
+ * Imprime un número entero positivo en formato decimal.
+ * Primero imprime el número dividido por 10, luego imprime el último dígito del número.
+ *
+ * @param n: El número entero positivo a imprimir.
+ * @param total: Un puntero a un entero que se actualizará con el número de caracteres escritos.
+ * @return: El número de caracteres escritos.
+ */
+
 static int	other_cases(int n, int *total)
 {
 	int	aux;
@@ -70,6 +96,14 @@ static int	other_cases(int n, int *total)
 	numchar = numchar + aux;
 	return (numchar);
 }
+
+/**
+ * Imprime un número entero en formato decimal.
+ * Dependiendo del valor del número, llama a min_negative, negative_numbers o other_cases.
+ *
+ * @param n: El número entero a imprimir.
+ * @param total: Un puntero a un entero que se actualizará con el número de caracteres escritos.
+ */
 
 void	ft_printinteger(int n, int *total)
 {
